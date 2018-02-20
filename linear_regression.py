@@ -13,7 +13,7 @@ import shutil
 
 ## constants
 
-LOGDIR = 'C:/Users/Sebastian/tensorflow/logs'
+LOGDIR = 'INSERT/ABSOLUTE/PATH/TO/YOUR/LOGDIR'
 
 ## linear regression implementation
 
