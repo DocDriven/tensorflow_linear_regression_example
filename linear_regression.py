@@ -2,21 +2,18 @@
 
 '''This file implements a simple linear regression algorithm. The aim is to fit
 a straight line of the form f(x) = ax + t that has some additional noise on it.
-By default, the line has the function f(x) = 3x + 1. '''
+By default, the straight line is described by the function f(x) = 3x + 1.'''
 
 ## Libraries
-
 import tensorflow as tf
 import numpy as np
 from matplotlib import pyplot as plt
 import shutil
 
 ## constants
-
 LOGDIR = 'INSERT/ABSOLUTE/PATH/TO/YOUR/LOGDIR'
 
 ## linear regression implementation
-
 def linear_regression(tr_input, tr_output, learning_rate, epochs=100):
 
     # remove old graph elements
@@ -70,6 +67,7 @@ def linear_regression(tr_input, tr_output, learning_rate, epochs=100):
     plt.plot(tr_input, tr_output, 'ro', tr_input, w_opt*tr_input+b_opt, 'bx')
     plt.show()
     
+## generate training data and run the regression for different learning rates
 def main():
     
     # delete LOGDIR to start training from scratch
@@ -86,5 +84,6 @@ def main():
     print("Training Done!")
     print("Run \'tensorboard --logdir=%s\' to see results!" % LOGDIR)
     
+## call main() automatically when runnings this script
 if __name__ == "__main__":
     main()
